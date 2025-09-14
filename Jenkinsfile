@@ -1,5 +1,9 @@
 pipeline {
     agent any   // Локал agent ашиглана
+    agent any
+    environment {
+        PATH = "/usr/local/bin:${env.PATH}"
+    }
     stages {
         stage('Restore') {
             steps {
