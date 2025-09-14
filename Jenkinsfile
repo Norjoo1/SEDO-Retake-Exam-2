@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/dotnet/sdk:6.0'
-        }
-    }
+    agent any   // Локал agent ашиглана
     stages {
         stage('Restore') {
             steps {
